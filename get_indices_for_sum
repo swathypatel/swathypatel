@@ -1,0 +1,17 @@
+def add_sum(mylist, target):
+    for i in range(len(mylist)):
+        for j in range(i+1, len(mylist)):
+            if mylist[i] + mylist[j] == target:
+                return i, j
+
+def add_sum1(mylist, target):
+    d = {}
+    for i in mylist:
+        if i in d:
+            return mylist.index(target - i), mylist.index(i)
+        else:
+            d[target - i] = True
+    return False
+
+print(add_sum([3,4,6,9,2], 12))
+print(add_sum1([3,4,6,9,2], 12))
