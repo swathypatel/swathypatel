@@ -1,0 +1,12 @@
+def min_in_list(mylist):
+    return min(mylist)
+
+def min_in_list1(mylist):
+    min1 = mylist[0]
+    for i in mylist[1:]:
+        if min1 > i:
+            min1 = i
+    return min1
+
+print(min_in_list([3,4,6,9,2]))
+print(min_in_list1([3,4,6,9,2]))
